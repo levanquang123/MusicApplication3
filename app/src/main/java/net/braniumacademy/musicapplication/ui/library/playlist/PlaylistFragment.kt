@@ -1,5 +1,6 @@
 package net.braniumacademy.musicapplication.ui.library.playlist
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -55,7 +56,15 @@ class PlaylistFragment : Fragment() {
                 }
 
                 override fun onPlaylistMenuOptionClick(playlist: Playlist) {
-                    // todo
+                    AlertDialog.Builder(requireContext())
+                        .setTitle("Xác nhận xóa")
+                        .setMessage("Bạn có muốn xóa playlist \"${playlist.name}\" không?")
+                        .setPositiveButton("Có") { _, _ ->
+                            playlistViewModel.deletePlaylist(playlist)
+                        }
+                        .setNegativeButton("Không", null)
+                        .show()
+                    SharedObjectUtils.addPlaylist(playlist)
                 }
             }
         )

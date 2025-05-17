@@ -43,6 +43,11 @@ class PlaylistViewModel @Inject constructor(
         }
     }
 
+    fun deletePlaylist(playlist: Playlist) {
+        viewModelScope.launch(Dispatchers.IO) {
+            playlistRepository.deletePlaylist(playlist)
+        }
+    }
     fun findPlaylistByName(playlistName: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val result = playlistRepository.findPlaylistByName(playlistName)
