@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view_discovery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.discovery.DiscoveryFragment">
+
+        <ImageButton
+            android:id="@+id/btn_search_discovery"
+            android:layout_width="@dimen/button_width_48"
+            android:layout_height="@dimen/button_height_48"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/image_button_description"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/text_title_discovery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_title_discovery"
+            tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck,DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/text_title_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/title_discovery"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_artist"
+            android:name="net.braniumacademy.musicapplication.ui.discovery.artist.ArtistFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title_discovery"
+            tools:layout="@layout/fragment_artist" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_most_heard"
+            android:name="net.braniumacademy.musicapplication.ui.discovery.mostheard.MostHeardFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fcv_artist"
+            tools:layout="@layout/fragment_most_heard" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_for_you"
+            android:name="net.braniumacademy.musicapplication.ui.discovery.foryou.ForYouFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fcv_most_heard"
+            tools:layout="@layout/fragment_for_you" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

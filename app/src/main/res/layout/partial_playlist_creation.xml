@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btn_item_create_playlist"
+        android:layout_width="@dimen/width_48"
+        android:layout_height="@dimen/height_48"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
+        android:contentDescription="@string/image_button_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/text_item_create_playlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:text="@string/label_create_playlist"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_item_create_playlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_item_create_playlist"
+        app:layout_constraintTop_toTopOf="@+id/btn_item_create_playlist" />
+</androidx.constraintlayout.widget.ConstraintLayout>

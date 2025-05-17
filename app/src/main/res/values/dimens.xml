@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_width_48">48dp</dimen>
+    <dimen name="button_height_48">48dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="card_corner_radius_16">16dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="card_corner_radius_8">8dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="playlist_artwork_width">150dp</dimen>
+    <dimen name="playlist_artwork_height">150dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="detail_song_artwork_width">128dp</dimen>
+    <dimen name="detail_song_artwork_height">128dp</dimen>
+    <dimen name="artwork_width">48dp</dimen>
+    <dimen name="artwork_height">48dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="width_64">64dp</dimen>
+    <dimen name="height_64">64dp</dimen>
+    <dimen name="width_32">32dp</dimen>
+    <dimen name="height_32">32dp</dimen>
+    <dimen name="width_48">48dp</dimen>
+    <dimen name="height_48">48dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="card_corner_radius_32">32dp</dimen>
+    <dimen name="avatar_width_154">154dp</dimen>
+    <dimen name="avatar_height_154">154dp</dimen>
+    <dimen name="card_corner_radius_24">24dp</dimen>
+</resources>

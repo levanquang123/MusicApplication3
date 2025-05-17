@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_artist_avatar"
+        android:layout_width="@dimen/width_48"
+        android:layout_height="@dimen/height_48"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:contentDescription="@string/image_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_artist_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="@string/artist_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/btn_subscribe"
+        app:layout_constraintStart_toEndOf="@+id/image_artist_avatar" />
+
+    <TextView
+        android:id="@+id/text_artist_subscribe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:text="@string/text_number_subscriber"
+        app:layout_constraintEnd_toEndOf="@+id/text_artist_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_artist_name"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/padding_2"
+        android:text="@string/action_interest"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?android:textColorPrimary"
+        android:theme="@style/ButtonBackgroundTheme"
+        app:cornerRadius="@dimen/card_corner_radius_32"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:strokeColor="?android:colorControlNormal"
+        app:strokeWidth="2dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

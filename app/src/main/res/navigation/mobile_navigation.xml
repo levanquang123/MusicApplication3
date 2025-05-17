@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="net.braniumacademy.musicapplication.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_moreRecommendedFragment2"
+            app:destination="@id/moreRecommendedFragment2"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreAlbumFragment"
+            app:destination="@id/moreAlbumFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailAlbumFragment"
+            app:destination="@id/detailAlbumFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_library"
+        android:name="net.braniumacademy.musicapplication.ui.library.LibraryFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_library">
+        <action
+            android:id="@+id/action_libraryFragment_to_morePlaylistFragment"
+            app:destination="@id/morePlaylistFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_library" />
+        <action
+            android:id="@+id/action_libraryFragment_to_playlistDetailFragment"
+            app:destination="@id/playlistDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/navigation_library" />
+        <action
+            android:id="@+id/action_libraryFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_library" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_discovery"
+        android:name="net.braniumacademy.musicapplication.ui.discovery.DiscoveryFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_discovery">
+        <action
+            android:id="@+id/action_discoveryFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/navigation_discovery" />
+        <action
+            android:id="@+id/action_discoveryFragment_to_moreArtistFragment"
+            app:destination="@id/moreArtistFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_discovery" />
+        <action
+            android:id="@+id/action_discoveryFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@id/navigation_discovery" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="net.braniumacademy.musicapplication.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/moreRecommendedFragment2"
+        android:name="net.braniumacademy.musicapplication.ui.home.recommended.more.MoreRecommendedFragment"
+        android:label="fragment_more_recommended"
+        tools:layout="@layout/fragment_more_recommended" />
+    <fragment
+        android:id="@+id/moreAlbumFragment"
+        android:name="net.braniumacademy.musicapplication.ui.home.album.more.MoreAlbumFragment"
+        android:label="fragment_more_album"
+        tools:layout="@layout/fragment_more_album">
+        <action
+            android:id="@+id/action_moreAlbumFragment_to_detailAlbumFragment"
+            app:destination="@id/detailAlbumFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/moreAlbumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAlbumFragment"
+        android:name="net.braniumacademy.musicapplication.ui.home.album.detail.DetailAlbumFragment"
+        android:label="fragment_detail_album"
+        tools:layout="@layout/fragment_detail_album" />
+    <fragment
+        android:id="@+id/morePlaylistFragment"
+        android:name="net.braniumacademy.musicapplication.ui.library.playlist.more.MorePlaylistFragment"
+        android:label="fragment_more_playlist"
+        tools:layout="@layout/fragment_more_playlist">
+        <action
+            android:id="@+id/action_morePlaylistFragment_to_playlistDetailFragment"
+            app:destination="@id/playlistDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/playlistDetailFragment"
+        android:name="net.braniumacademy.musicapplication.ui.library.playlist.detail.PlaylistDetailFragment"
+        android:label="fragment_playlist_detail"
+        tools:layout="@layout/fragment_playlist_detail" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="net.braniumacademy.musicapplication.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="screenName"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="playlistName"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreArtistFragment"
+        android:name="net.braniumacademy.musicapplication.ui.discovery.artist.more.MoreArtistFragment"
+        android:label="fragment_more_artist"
+        tools:layout="@layout/fragment_more_artist">
+        <action
+            android:id="@+id/action_moreArtistFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/moreArtistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistDetailFragment"
+        android:name="net.braniumacademy.musicapplication.ui.discovery.artist.detail.ArtistDetailFragment"
+        android:label="fragment_artist_detail"
+        tools:layout="@layout/fragment_artist_detail" />
+    <navigation
+        android:id="@+id/navigation_now_playing"
+        app:startDestination="@id/nowPlayingActivity">
+        <activity
+            android:id="@+id/nowPlayingActivity"
+            android:name="net.braniumacademy.musicapplication.ui.playing.NowPlayingActivity"
+            android:label="activity_now_playing"
+            tools:layout="@layout/activity_now_playing" />
+    </navigation>
+    <action
+        android:id="@+id/action_global_navigation_now_playing"
+        app:destination="@id/navigation_now_playing"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/slide_up"
+        app:popExitAnim="@anim/fade_out" />
+    <fragment
+        android:id="@+id/fr_searching"
+        android:name="net.braniumacademy.musicapplication.ui.searching.SearchingFragment"
+        android:label="fragment_searching"
+        tools:layout="@layout/fragment_searching" />
+    <action
+        android:id="@+id/action_global_fr_searching"
+        app:destination="@id/fr_searching"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out" />
+</navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.dialog.DialogAddSongToPlaylistFragment">
+
+    <include
+        android:id="@+id/include_edit_text_playlist_name"
+        layout="@layout/fragment_dialog_playlist_creation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_weight="1"
+            android:text="@string/action_cancel"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?android:textColorPrimary"
+            android:theme="@style/ButtonBackgroundTheme"
+            app:strokeColor="?android:colorControlNormal"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_weight="1"
+            android:text="@string/action_create"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?android:textColorPrimary"
+            android:theme="@style/ButtonBackgroundTheme"
+            app:strokeColor="?android:colorControlNormal"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dialog_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_playlist" />
+</LinearLayout>

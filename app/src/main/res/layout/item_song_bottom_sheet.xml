@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/button_width_48"
+        android:layout_height="@dimen/button_height_48"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
+        app:cardCornerRadius="@dimen/card_corner_radius_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_option_song_artwork"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="centerCrop"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/text_option_item_song_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:text="@string/text_song_title"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_option_item_share"
+        app:layout_constraintStart_toEndOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/text_option_item_song_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        android:text="@string/text_song_artist"
+        app:layout_constraintEnd_toEndOf="@+id/text_option_item_song_title"
+        app:layout_constraintStart_toStartOf="@+id/text_option_item_song_title"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <ImageButton
+        android:id="@+id/btn_option_item_share"
+        android:layout_width="@dimen/button_width_48"
+        android:layout_height="@dimen/button_height_48"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/image_button_description"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/ic_share"
+        tools:ignore="RedundantDescriptionCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

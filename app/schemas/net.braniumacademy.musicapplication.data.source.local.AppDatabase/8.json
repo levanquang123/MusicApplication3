@@ -1,0 +1,478 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 8,
+    "identityHash": "4dd671ac9d0d9174dfea91c30de0a923",
+    "entities": [
+      {
+        "tableName": "songs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_id` TEXT NOT NULL, `title` TEXT NOT NULL, `album` TEXT NOT NULL, `artist` TEXT NOT NULL, `source` TEXT NOT NULL, `image` TEXT NOT NULL, `duration` INTEGER NOT NULL, `favorite` INTEGER NOT NULL, `counter` INTEGER NOT NULL, `replay` INTEGER NOT NULL, PRIMARY KEY(`song_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "song_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "album",
+            "columnName": "album",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "favorite",
+            "columnName": "favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "counter",
+            "columnName": "counter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "replay",
+            "columnName": "replay",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "song_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "playlists",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`playlist_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `artwork` TEXT, `created_at` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "_id",
+            "columnName": "playlist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artwork",
+            "columnName": "artwork",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "playlist_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "albums",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`album_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `size` INTEGER NOT NULL, `artwork` TEXT NOT NULL, PRIMARY KEY(`album_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "album_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artwork",
+            "columnName": "artwork",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "album_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "recent_songs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`play_at` INTEGER NOT NULL, `song_id` TEXT NOT NULL, `title` TEXT NOT NULL, `album` TEXT NOT NULL, `artist` TEXT NOT NULL, `source` TEXT NOT NULL, `image` TEXT NOT NULL, `duration` INTEGER NOT NULL, `favorite` INTEGER NOT NULL, `counter` INTEGER NOT NULL, `replay` INTEGER NOT NULL, PRIMARY KEY(`song_id`))",
+        "fields": [
+          {
+            "fieldPath": "playAt",
+            "columnName": "play_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "song_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "album",
+            "columnName": "album",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "favorite",
+            "columnName": "favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "counter",
+            "columnName": "counter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "replay",
+            "columnName": "replay",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "song_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "playlist_song_cross_ref",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`playlist_id` INTEGER NOT NULL, `song_id` TEXT NOT NULL, PRIMARY KEY(`playlist_id`, `song_id`))",
+        "fields": [
+          {
+            "fieldPath": "playlistId",
+            "columnName": "playlist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "songId",
+            "columnName": "song_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "playlist_id",
+            "song_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_playlist_song_cross_ref_song_id",
+            "unique": false,
+            "columnNames": [
+              "song_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_playlist_song_cross_ref_song_id` ON `${TABLE_NAME}` (`song_id`)"
+          },
+          {
+            "name": "index_playlist_song_cross_ref_playlist_id",
+            "unique": false,
+            "columnNames": [
+              "playlist_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_playlist_song_cross_ref_playlist_id` ON `${TABLE_NAME}` (`playlist_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "artists",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`artist_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `avatar` TEXT NOT NULL, `interested` INTEGER NOT NULL, `care_about` INTEGER NOT NULL, PRIMARY KEY(`artist_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "artist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avatar",
+            "columnName": "avatar",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "interested",
+            "columnName": "interested",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCareAbout",
+            "columnName": "care_about",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "artist_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "artist_song_cross_ref",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_id` TEXT NOT NULL, `artist_id` INTEGER NOT NULL, PRIMARY KEY(`song_id`, `artist_id`))",
+        "fields": [
+          {
+            "fieldPath": "songId",
+            "columnName": "song_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artistId",
+            "columnName": "artist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "song_id",
+            "artist_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_artist_song_cross_ref_artist_id",
+            "unique": false,
+            "columnNames": [
+              "artist_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_artist_song_cross_ref_artist_id` ON `${TABLE_NAME}` (`artist_id`)"
+          },
+          {
+            "name": "index_artist_song_cross_ref_song_id",
+            "unique": false,
+            "columnNames": [
+              "song_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_artist_song_cross_ref_song_id` ON `${TABLE_NAME}` (`song_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "song_remote_keys",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_id` TEXT NOT NULL, `prev_key` INTEGER, `next_key` INTEGER, PRIMARY KEY(`song_id`))",
+        "fields": [
+          {
+            "fieldPath": "songId",
+            "columnName": "song_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prevKey",
+            "columnName": "prev_key",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextKey",
+            "columnName": "next_key",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "song_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "db_tracking",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `last_song_updated` INTEGER NOT NULL DEFAULT 0, `last_artist_updated` INTEGER NOT NULL DEFAULT 0)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastSongUpdated",
+            "columnName": "last_song_updated",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "lastArtistUpdated",
+            "columnName": "last_artist_updated",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "artist_remote_keys",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`artist_id` INTEGER NOT NULL, `prev_key` INTEGER, `next_key` INTEGER, PRIMARY KEY(`artist_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "artist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prevKey",
+            "columnName": "prev_key",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextKey",
+            "columnName": "next_key",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "artist_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4dd671ac9d0d9174dfea91c30de0a923')"
+    ]
+  }
+}

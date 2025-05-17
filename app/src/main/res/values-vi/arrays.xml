@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_entries">
+        <item>Tiếng Anh</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>en</item>
+        <item>vi</item>
+    </string-array>
+
+    <string-array name="text_size_entries">
+        <item>Nhỏ</item>
+        <item>Vừa</item>
+        <item>Lớn</item>
+    </string-array>
+
+    <string-array name="text_size_values">
+        <item>16sp</item>
+        <item>18sp</item>
+        <item>22sp</item>
+    </string-array>
+</resources>

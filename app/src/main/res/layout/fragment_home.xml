@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.home.HomeFragment">
+
+        <ImageButton
+            android:id="@+id/btn_search_home"
+            android:layout_width="@dimen/button_width_48"
+            android:layout_height="@dimen/button_height_48"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/image_button_description"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/text_title_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_title_home"
+            tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+        <TextView
+            android:id="@+id/text_title_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/title_home"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_album_hot"
+            android:name="net.braniumacademy.musicapplication.ui.home.album.AlbumHotFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title_home"
+            tools:layout="@layout/fragment_album_hot" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_recommended"
+            android:name="net.braniumacademy.musicapplication.ui.home.recommended.RecommendedFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fcv_album_hot"
+            tools:layout="@layout/fragment_recommended" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
